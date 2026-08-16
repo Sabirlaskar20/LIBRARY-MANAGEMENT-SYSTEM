@@ -7,7 +7,9 @@
 - Jigyashu Gogoi
 
 ## Project Description
-A web-based Library Management System developed using the MERN stack to manage books, members, book issue/return, and library records efficiently.
+A web-based Library Management System developed using 
+the MERN stack to manage books, members, book issue/return,
+and library records efficiently.
 
 ## Technology Stack
 - MongoDB
