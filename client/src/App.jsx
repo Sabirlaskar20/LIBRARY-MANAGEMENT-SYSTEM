@@ -9,43 +9,43 @@ import IssueReturn from './pages/IssueReturn';
 import Login from './pages/Login';
 
 function App() {
-  return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="*" element={<Workspace />} />
-    </Routes>
-  );
+	return (
+		<Routes>
+			<Route path="/login" element={<Login />} />
+			<Route path="*" element={<Workspace />} />
+		</Routes>
+	);
 }
 
 function Workspace() {
-  return (
-    <div className="app-shell">
-      <Sidebar />
-      <div className="workspace">
-        <Header />
-        <main className="page-content">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/books" element={<Books />} />
-            <Route path="/members" element={<Members />} />
-            <Route path="/issue-return" element={<IssueReturn />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </div>
-  );
+	return (
+		<div className="app-shell">
+			<Sidebar />
+			<div className="workspace">
+				<Header />
+				<main className="page-content">
+					<Routes>
+						<Route path="/" element={<Dashboard />} />
+						<Route path="/books" element={<Books />} />
+						<Route path="/members" element={<Members />} />
+						<Route path="/issue-return" element={<IssueReturn />} />
+						<Route path="*" element={<NotFound />} />
+					</Routes>
+				</main>
+				<Footer />
+			</div>
+		</div>
+	);
 }
 
 function NotFound() {
-  return (
-    <section className="empty-state">
-      <p className="eyebrow">404</p>
-      <h1>Page not found</h1>
-      <NavLink className="button button-primary" to="/">Return to dashboard</NavLink>
-    </section>
-  );
+	return (
+		<section className="empty-state">
+			<p className="eyebrow">404</p>
+			<h1>Page not found</h1>
+			<NavLink className="button button-primary" to="/">Return to dashboard</NavLink>
+		</section>
+	);
 }
 
 export default App;
