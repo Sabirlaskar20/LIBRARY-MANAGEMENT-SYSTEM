@@ -1,31 +1,17 @@
-// import { NavLink } from 'react-router-dom';
-
-// function Navbar() {
-// 	return (
-// 		<header className="topbar">
-// 			<h1>Library Management System</h1>
-// 			<nav className="topbar-actions">
-// 				<NavLink className="nav-link" to="/">Home</NavLink>
-// 				<NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
-// 				<NavLink className="nav-link" to="/profile">Profile</NavLink>
-// 				<NavLink className="nav-link" to="/login">Login</NavLink>
-// 			</nav>
-// 		</header>
-// 	);
-// }
-
-// export default Navbar;
-
 import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/dashboard">Dashboard</Link>
-      <Link to="/profile">Profile</Link>
-      <Link to="/login">Login</Link>
-    </nav>
+    <header className="navbar">
+      <Link to="/" className="navbar-title">
+        Library Management System
+      </Link>
+
+      <div className="navbar-user">
+        <span>Admin User</span>
+        <div className="avatar">A</div>
+      </div>
+    </header>
   );
 }
 

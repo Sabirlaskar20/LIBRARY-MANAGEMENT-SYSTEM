@@ -1,0 +1,121 @@
+/* ---------- Navbar ---------- */
+.navbar {
+  height: var(--navbar-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.navbar-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-ink);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--color-slate);
+}
+
+.navbar-user .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+  color: var(--color-ink);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background-color: var(--color-ink);
+  color: var(--color-parchment);
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 0.75rem;
+}
+
+.sidebar-brand {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-white);
+  padding: 0 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 1rem;
+}
+
+.sidebar-brand span {
+  color: var(--color-gold-light);
+}
+
+.sidebar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.sidebar-nav a {
+  display: block;
+  color: rgba(247, 243, 234, 0.75);
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  position: relative;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: rgba(255,255,255,0.06);
+  color: var(--color-white);
+}
+
+.sidebar-nav a.active {
+  background-color: rgba(184, 145, 47, 0.16);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.sidebar-nav a.active::before {
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--color-gold);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ---------- App shell (Sidebar + Navbar/main/Footer column) ---------- */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.workspace {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}

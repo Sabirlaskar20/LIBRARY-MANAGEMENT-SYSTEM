@@ -1,22 +1,44 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+
+const navItems = [
+  { label: "Dashboard", to: "/dashboard" },
+  { label: "Books", to: "/books" },
+  { label: "Members", to: "/members" },
+  { label: "Issue / Return", to: "/issue-return" },
+  { label: "Fines", soon: true },
+  { label: "Reports", soon: true },
+  { label: "Profile", to: "/profile" },
+];
 
 function Sidebar() {
-	return (
-		<aside className="sidebar">
-			<div className="brand-mark">
-				<span>LM</span>
-				<strong>Library MS</strong>
-			</div>
+  return (
+    <aside className="sidebar">
+      <div className="sidebar-brand">
+        Library<span>MS</span>
+      </div>
 
-			<p className="nav-label">Menu</p>
-			<NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
-			<NavLink className="nav-link" to="/profile">Profile</NavLink>
-
-			<div className="sidebar-bottom">
-				<small>&copy; 2026 Library Management System</small>
-			</div>
-		</aside>
-	);
+      <ul className="sidebar-nav">
+        {navItems.map((item) =>
+          item.soon ? (
+            <li key={item.label}>
+              <span className="sidebar-nav-disabled">
+                {item.label} <small>Soon</small>
+              </span>
+            </li>
+          ) : (
+            <li key={item.to}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          )
+        )}
+      </ul>
+    </aside>
+  );
 }
 
 export default Sidebar;

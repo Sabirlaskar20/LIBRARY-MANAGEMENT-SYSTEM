@@ -1,0 +1,313 @@
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background-color: var(--color-burgundy);
+  color: var(--color-white);
+}
+.btn-primary:hover { background-color: var(--color-burgundy-light); }
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-border);
+}
+.btn-secondary:hover { background-color: var(--color-parchment-dark); }
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------- Card ---------- */
+.card {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+  border: 1px solid var(--color-border);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  width: 4px;
+  border-radius: 2px;
+  background-color: var(--color-gold);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  color: var(--color-slate);
+  font-size: 0.9rem;
+}
+
+/* ---------- Page Title ---------- */
+.page-title-wrap {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.page-title-wrap h1 { margin-bottom: 0.25rem; }
+.page-subtitle {
+  color: var(--color-slate);
+  font-size: 0.95rem;
+}
+
+/* ---------- Forms ---------- */
+.form-group {
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-white);
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  transition: border-color 0.15s ease;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-gold);
+}
+
+.auth-card {
+  max-width: 380px;
+  margin: 4rem auto;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 2.25rem 2rem;
+}
+.auth-card h1 { text-align: center; margin-bottom: 0.35rem; }
+.auth-subtitle {
+  text-align: center;
+  color: var(--color-slate);
+  font-size: 0.85rem;
+  margin-bottom: 1.75rem;
+}
+.auth-card .btn { width: 100%; margin-top: 0.5rem; }
+
+.form-error {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Sidebar disabled items ---------- */
+.sidebar-nav-disabled {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(247, 243, 234, 0.35);
+}
+.sidebar-nav-disabled small {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+/* ---------- Page heading ---------- */
+.page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+.muted {
+  color: var(--color-slate);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Stats grid ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.stat-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--color-ink);
+  margin: 0.5rem 0 0.25rem;
+}
+.stat-card .stat-label {
+  color: var(--color-slate);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Table ---------- */
+.table-wrap {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+th {
+  color: var(--color-slate);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+tr:last-child td { border-bottom: 0; }
+
+/* ---------- Status tags ---------- */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.tag-available { background: #E3F1E7; color: var(--color-success); }
+.tag-issued { background: #FBEFD6; color: var(--color-gold); }
+.tag-overdue { background: #F7E1DF; color: var(--color-danger); }
+.tag-active { background: #E3F1E7; color: var(--color-success); }
+.tag-inactive { background: #F7E1DF; color: var(--color-danger); }
+
+/* ---------- Empty state ---------- */
+.empty-state { text-align: center; padding: 3rem 1rem; color: var(--color-slate); }
+
+/* ---------- Toolbar ---------- */
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.toolbar input, .toolbar select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  font-size: 0.9rem;
+}
+
+/* ---------- Public nav (Home) ---------- */
+.public-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 6%;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+.public-nav .brand { font-family: var(--font-display); font-size: 1.3rem; color: var(--color-ink); }
+.public-nav .brand span { color: var(--color-gold); }
+.public-nav-links { display: flex; gap: 1.5rem; align-items: center; }
+.public-nav-links a { color: var(--color-charcoal); font-size: 0.9rem; font-weight: 500; }
+
+/* ---------- Hero ---------- */
+.hero { text-align: center; padding: 4.5rem 6% 3.5rem; max-width: 760px; margin: 0 auto; }
+.hero h1 { font-size: 2.6rem; margin-bottom: 0.75rem; }
+.hero p { color: var(--color-slate); font-size: 1.05rem; margin-bottom: 2rem; }
+.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Features ---------- */
+.features-section { padding: 2.5rem 6% 4.5rem; max-width: 1080px; margin: 0 auto; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+.feature-card .feature-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+/* ---------- Public footer ---------- */
+.public-footer {
+  text-align: center;
+  padding: 2rem 6%;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-slate);
+  font-size: 0.85rem;
+}
+
+/* ---------- Profile ---------- */
+.profile-card { max-width: 480px; }
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+.profile-row:last-of-type { border-bottom: 0; }
+.profile-row span:first-child { color: var(--color-slate); }
+.profile-row span:last-child { color: var(--color-ink); font-weight: 600; }
+
+/* ---------- 404 ---------- */
+.notfound-page {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+.notfound-page .notfound-code {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+/* ---------- Login page wrapper (AuthLayout) ---------- */
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--color-ink);
+}
+.login-panel { width: 100%; max-width: 420px; }

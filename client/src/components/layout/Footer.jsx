@@ -1,10 +1,9 @@
 function Footer() {
-	return (
-		<footer className="footer">
-			Library Management System
-			<span>BCA Project &mdash; Sprint 6</span>
-		</footer>
-	);
+  return (
+    <footer className="footer">
+      &copy; {new Date().getFullYear()} Library Management System — BCA Final Project
+    </footer>
+  );
 }
 
 export default Footer;
