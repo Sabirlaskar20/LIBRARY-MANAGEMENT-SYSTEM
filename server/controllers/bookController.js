@@ -1,3 +1,5 @@
+import Book from '../models/Book.js';
+
 export function getAllBooks(_request, response) {
   response.json({ message: 'Fetched all books (test response)' });
 }
