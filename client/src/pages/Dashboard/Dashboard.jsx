@@ -4,10 +4,10 @@ import Button from "../../components/ui/Button";
 import PageTitle from "../../components/ui/PageTitle";
 
 const stats = [
-  { label: "Total Books", value: 1240 },
-  { label: "Total Members", value: 356 },
-  { label: "Issued Books", value: 87 },
-  { label: "Overdue Books", value: 12 },
+  { label: "Total Books", value:  1240 },
+  { label: "Total Members", value:  356 },
+  { label: "Issued Books", value:  87 },
+  { label: "Overdue Books", value:  12 },
 ];
 
 const recentBorrowings = [
